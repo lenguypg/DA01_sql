@@ -12,8 +12,11 @@ select city, state from station;
 select city from station where city like 'A%' or city like 'E%' or city like 'I%' or city like 'U%' or city like 'O%';
 
 --ex5
+where city not like 'A%' and city not like 'E%' and city not like 'I%' and city not like 'U%' and city not like 'O%'; 
 
 --ex6
+select distinct city from station
+where city like '%A' or city like '%E' or city like '%I' or city like '%U' or city like '%O';
 
 --ex7
 select name from employee 
@@ -52,5 +55,7 @@ where finish_date is NULL
   where yearly_salary < 30000 or yearly_salary >= 70000;
 
 --ex15
-
+select advertising_channel from uber_advertising
+where money_spent > 100000 
+and year = 2019
 
